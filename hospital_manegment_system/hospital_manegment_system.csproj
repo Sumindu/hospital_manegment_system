@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{227D97C9-16A4-4537-A264-4C688B318A95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hospital_manegment_system</RootNamespace>
+    <AssemblyName>hospital_manegment_system</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_doctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_doctors.Designer.cs">
+      <DependentUpon>add_doctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_staff.Designer.cs">
+      <DependentUpon>add_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="docs_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="docs_info.Designer.cs">
+      <DependentUpon>docs_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorsNames.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DoctorsNames.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalAppoinment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitalAppoinment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalBill.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitalBill.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalDocs.cs">
+      <DependentUpon>hospitalDocs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalDocs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitalDocs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalStaff.cs">
+      <DependentUpon>hospitalStaff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hospitalStaff.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hospitalStaff.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="patient_appoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patient_appoinment.Designer.cs">
+      <DependentUpon>patient_appoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="p_chechout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="p_chechout.Designer.cs">
+      <DependentUpon>p_chechout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff_info.Designer.cs">
+      <DependentUpon>staff_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ulog.cs" />
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_doctors.resx">
+      <DependentUpon>add_doctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_staff.resx">
+      <DependentUpon>add_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="docs_info.resx">
+      <DependentUpon>docs_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patient_appoinment.resx">
+      <DependentUpon>patient_appoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="p_chechout.resx">
+      <DependentUpon>p_chechout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_info.resx">
+      <DependentUpon>staff_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DoctorsNames.xsc">
+      <DependentUpon>DoctorsNames.xsd</DependentUpon>
+    </None>
+    <None Include="DoctorsNames.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DoctorsNames.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DoctorsNames.xss">
+      <DependentUpon>DoctorsNames.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalAppoinment.xsc">
+      <DependentUpon>hospitalAppoinment.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalAppoinment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitalAppoinment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitalAppoinment.xss">
+      <DependentUpon>hospitalAppoinment.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalBill.xsc">
+      <DependentUpon>hospitalBill.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalBill.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitalBill.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitalBill.xss">
+      <DependentUpon>hospitalBill.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalDocs.xsc">
+      <DependentUpon>hospitalDocs.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalDocs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitalDocs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitalDocs.xss">
+      <DependentUpon>hospitalDocs.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalStaff.xsc">
+      <DependentUpon>hospitalStaff.xsd</DependentUpon>
+    </None>
+    <None Include="hospitalStaff.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hospitalStaff.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hospitalStaff.xss">
+      <DependentUpon>hospitalStaff.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-png-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hospital.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hospital_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>hospital.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
